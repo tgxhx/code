@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+<div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}">
+    <!--<p>姓名是{{person.firstName + ' ' + person.lastName}}</p>-->
+    <p>姓名是：<span ng-bind="person.firstName + ' ' + person.lastName"></span></p>
+</div>
+</body>
+</html>

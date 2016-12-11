@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myApp">
+    <p>255的16进制是：</p>
+    <h1>{{255 | myFormat}}</h1>
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.service("hexafy",function () {
+        this.myFunc = function (x) {
+            return x.toString(8);
+        }
+    })
+    //在控制器中使用
+    /*app.controller("myCtrl",function ($scope, hexafy) {
+     $scope.hex = hexafy.myFun(255);
+     })*/
+    //在过滤器中使用
+    app.filter("myFormat",["hexafy",function (hexafy) {
+        return function (x) {
+            return hexafy.myFunc(x);
+        }
+    }])
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <h1>姓氏为：{{lastName}}的家族成员：</h1>
+    <ul>
+        <li ng-repeat="x in names">{{x}} {{lastName}}</li>
+    </ul>
+</div>
+<script>
+    var app = angular.module("myApp",[]);
+    app.controller("myCtrl",function ($scope, $rootScope) {
+        $scope.names = ["Emil", "Tobias", "Linus"];
+        $rootScope.lastName = "Refsnes";
+    })
+</script>
+</body>
+</html>

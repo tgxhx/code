@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <p>现在时间是：</p>
+    <h1>{{time}}</h1>
+</div>
+<script>
+    angular.module("myApp",[]).controller("myCtrl",function ($scope, $interval) {
+        $scope.time = new Date().toLocaleTimeString();
+        $interval(function () {
+            $scope.time = new Date().toLocaleTimeString();
+        },1000);
+    });
+</script>
+</body>
+</html>

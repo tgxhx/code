@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <select name="" id="" ng-model="selected" ng-options="x for (x,y) in cars"></select>
+    <h1>你选择的是{{selected.brand}}</h1>
+    <h2>模型是：{{selected.model}}</h2>
+    <h3>颜色是：{{selected.color}}</h3>
+</div>
+<script>
+    var app = angular.module("myApp",[]);
+    app.controller("myCtrl",function ($scope) {
+        $scope.cars = {
+            car01 : {brand : "Ford", model : "Mustang", color : "red"},
+            car02 : {brand : "Fiat", model : "500", color : "white"},
+            car03 : {brand : "Volvo", model : "XC90", color : "black"}
+        }
+    })
+</script>
+</body>
+</html>

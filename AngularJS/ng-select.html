@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+<!--<div ng-app="myApp" ng-controller="myCtrl">
+    <select ng-model="selectedName" ng-options="x for x in names">
+    </select>
+</div>-->
+<div ng-app="myApp" ng-controller="myCtrl">
+    <select name="" id="" ng-model="selectedName">
+        <option ng-repeat="x in names">{{x}}</option>
+    </select>
+    <p>你选择的是{{selectedName}}</p>
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller("myCtrl", function ($scope) {
+        $scope.names = ["Google", "Runoob", "Taobao"];
+    })
+</script>
+</body>
+</html>
