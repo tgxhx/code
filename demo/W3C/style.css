@@ -1,0 +1,143 @@
+#warp {
+    width:780px;
+    border-left:1px solid #e7e7e7;
+    border-right:1px solid #e7e7e7;
+    margin:0px auto;
+    padding:0 10px 10px;
+}
+#head {
+    /*height:200px;*/
+    /*background-color: aliceblue;*/
+    overflow: hidden;
+}
+.logo {
+    height:80px;
+    line-height:80px;
+    background-color: #3399cc;
+    color: #ffffff;
+    font-size: 30px;
+    text-indent:30px;
+}
+.nav {
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+.nav li{
+    float: left;
+    margin:0 32px;
+    /*background-color: lawngreen;*/
+}
+.nav li.current {
+    border-bottom: 3px solid #cc0000;
+}
+.nav li a{
+    font-size: 16px;
+    color: #7f7f7f;
+    display: block;
+    text-align: center;
+    padding-bottom: 2px;
+}
+.nav li a:hover {
+    border-bottom: 3px solid #cc0000;
+    text-decoration: none;
+}
+#main {
+    /*background: #13ffae;*/
+    margin-top: 20px;
+    position: relative;
+}
+#sidebar {
+    width:180px;
+    /*background-color: #c1fcff;*/
+}
+#sidebar dl {
+    padding:0 0 5px;
+}
+#sidebar dt {
+    margin-bottom: 10px;
+    background-color: #3399cc;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight:normal;
+    padding: 5px 0 5px 15px;
+    font-family:'微软雅黑';
+}
+#sidebar dd {
+    line-height:20px;
+    padding-left: 15px;
+    font-size: 12px;
+}
+#sidebar dd.current a {
+    color: #f00;
+}
+#sidebar a {
+    text-decoration: none;
+}
+#sidebar a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+#content {
+    position: absolute;
+    margin-left: 200px;
+    top:0;
+}
+#content h1 {
+    color: #000;
+    font-family:'微软雅黑';
+    font-size: 24px;
+    font-weight:normal;
+}
+.pageto {
+    margin-top: 5px;
+    padding:15px 0;
+    border-top:1px solid #aaaaaa;
+    border-bottom:3px solid #aaaaaa;
+}
+.pageto a {
+    border:1px solid #dfdfdf;
+    color: #555;
+    margin:0 10px;
+    padding:5px 20px;
+    background: #f3f3f3;
+}
+#content h3 {
+    color: #333;
+    line-height:26px;
+    margin-top: 10px;
+    font-weight:bold;
+}
+p {
+      line-height:24px;
+  }
+.learn a {
+    color: #900b09;
+    text-decoration: underline;
+}
+#content .disline {
+    border-bottom:1px dashed #ccc;
+    margin-top: 10px;
+}
+#content dl {
+    margin-bottom: 10px;
+}
+#content dt {
+    font-weight:bold;
+    line-height:26px;
+}
+#content dd {
+    line-height:22px;
+}
+p.tips {
+    color: #999;
+    margin-top: 20px;
+}
+#footer {
+    /*height:200px;*/
+    background-color: #dddddd;
+    margin-top: 10px;
+    text-align: center;
+    color: #999;
+    padding:15px 0;
+}
