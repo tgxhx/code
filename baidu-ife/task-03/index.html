@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务三：HTML、CSS布局入门，三栏式布局的实践</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 20px;
+        }
+        
+        .clear:before,
+        .clear:after {
+            content: '';
+            display: table;
+        }
+        .clear:after {
+            clear: both;
+        }
+        .clear {
+            *zoom: 1;
+        }
+        .container {
+            background-color: #eee;
+            border: 1px solid #999;
+            padding: 20px;
+            /*overflow: hidden;*/
+            min-width:500px;
+        }
+
+        .intro {
+            width: 160px;
+            height: 80px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #999;
+            float: left;
+        }
+
+        .intro img {
+            background: #eeeeee;
+            float: left;
+            display: block;
+            width: 80px;
+            height: 80px;
+        }
+
+        .intro h4 {
+            float: left;
+            margin-left: 15px;
+        }
+
+        .images {
+            float: right;
+            background-color: #fff;
+        }
+        ul {
+            padding:0 20px 20px 20px;
+            border:1px solid #999999;
+        }
+        ul li {
+            list-style-type: none;
+            margin-top:20px;
+            display: block;
+        }
+        ul li:first-child {
+        }
+        .images img {
+            width: 80px;
+            height: 80px;
+        }
+        article {
+            padding:20px;
+            background-color: #fff;
+            margin-left:220px;
+            margin-right:140px;
+            border:1px solid #999999;
+            line-height:30px;
+        }
+    </style>
+</head>
+<body>
+<div class="container clear">
+    <div class="intro">
+        <img src="images/logo.jpg" alt="">
+        <h4>团队名称</h4>
+    </div>
+    <div class="images">
+        <ul>
+            <li><a href=""><img src="images/cat.gif" alt=""></a></li>
+            <li><a href=""><img src="images/cat.gif" alt=""></a></li>
+            <li><a href=""><img src="images/cat.gif" alt=""></a></li>
+            <li><a href=""><img src="images/cat.gif" alt=""></a></li>
+        </ul>
+    </div>
+    <article>
+        <h3>【餐桌物种日历】 莲</h3>
+        <p>莲花是高洁的象征，代表着出淤泥而不染的品格，在各个亚洲宗教中也有一定的地位，但是，提及莲，我们这些单纯的吃货来说，
+            只会想到“全身都是宝”。从它轻薄芬芳的花瓣，到亭亭如盖的荷叶，再到生长荷叶和花朵的、鲜嫩脆爽的藕带，甚至冬季用于存储养分过冬的莲藕，没有一样能够逃过中国人的餐桌。</p>
+        <p>莲花的命运可谓悲惨，却也使得它被培育出了无数品种，并且广泛地栽培在亚洲东部从南到北的田地、河流与胡泊中。</p>
+        <h3>藕带与藕</h3>
+        <p>作为我们最熟悉的植物之一，莲不仅是常见的食材，也是常用的观赏植物，在各个民族中也作为文化符号时而出现；但它还是有很多不为人知的秘密，这也许是因为莲的根茎大部分完全淹没在河泥中，我们很难有机会看到它生长时的全貌。</p>
+    </article>
+</div>
+</body>
+</html>

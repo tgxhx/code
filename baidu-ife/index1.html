@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        header {
+            width: 100%;
+            height: 70px;
+            line-height: 70px;
+            background-color: #27313c;
+            text-align: center;
+            color: #ffffff;
+            position: fixed;
+            top: 0;
+            flex: 0 0 auto;
+        }
+
+        .container {
+            display: table;
+            margin:0px auto;
+            flex:1 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+        }
+
+        .demo-list{
+            padding: 10px 10px 0;
+            display: table;
+            margin-bottom:30px;
+        }
+        .div-head:first-child {
+            margin-top:90px;
+        }
+        .div-head {
+            font-weight:bold;
+            font-size:24px;
+            text-align: center;
+            margin-bottom:10px;
+        }
+
+        ul:after {
+            clear: both;
+        }
+
+        li {
+            float: left;
+            padding: 5px;
+            width: 100%;
+            /*background-color: #ff83c4;*/
+            list-style-type: none;
+        }
+
+        li a {
+            display: block;
+            padding: 10px;
+            color: #000;
+            text-decoration: none;
+            /*background-color: #ffa31f;*/
+            /*box-shadow: 0 0 1px #ccc;*/
+            border-radius: 5px;
+        }
+
+        li a:hover {
+            background-color: #27313c;
+            color: #ffffff;
+        }
+
+        li a .demo-title {
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        @media (min-width: 768px) {
+            li {
+                width: 50%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            li {
+                width: 33%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            li {
+                width: 25%;
+            }
+        }
+        footer {
+            background-color: #27313c;
+            margin-top: 30px;
+            margin-bottom:-1px;
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            flex:0 0 auto;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+
+        }
+        html {
+            height:100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+<header><h1>百度前端技术学院2016</h1></header>
+<div class="container">
+    <div class="div-head">第一阶段</div>
+    <ul class="demo-list">
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+    </ul>
+    <div class="div-head">第二阶段</div>
+    <ul class="demo-list">
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+    </ul>
+    <div class="div-head">第三阶段</div>
+    <ul class="demo-list">
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务一：零基础HTML编码</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务二：零基础HTML及CSS编码（一）</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务三：三栏式布局</div>
+        </a></li>
+        <li><a href="">
+            <div class="demo-title">任务四：定位和居中问题</div>
+        </a></li>
+    </ul>
+</div>
+<footer>
+    <hr style="border-top: 1px solid #ddd;"/>
+    <p><a href="https://github.com/tgxhx/baidu-ife" target="_blank">GitHub</a></p>
+</footer>
+</body>
+</html>

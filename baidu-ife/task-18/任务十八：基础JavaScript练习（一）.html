@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            border-radius: 5px;
+        }
+        li {
+            width:30px;
+            height:30px;
+            background-color: #f00;
+            color: #fff;
+            text-align: center;
+            line-height:30px;
+            float: left;
+            list-style-type: none;
+            margin:0 3px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" name="" id="num" style="width: 100px;">
+<button id="leftIn" onclick="leftIn()">左侧入</button>
+<button id="rightIn" onclick="rightIn()">右侧入</button>
+<button id="leftOut" onclick="leftOut()">左侧出</button>
+<button id="rightOut" onclick="rightOut()">右侧出</button>
+<ul id="queue">
+    <!--<li></li>
+    <li></li>
+    <li></li>-->
+</ul>
+<script>
+    function getId(id) {
+        return document.getElementById(id);
+    }
+
+    var queue = getId("queue");
+    function leftIn() {
+        var Li = document.createElement("LI");
+        var value = getId("num").value;
+        //判断是否为数字
+        if (!isNaN(value)) {
+            Li.innerHTML = value;
+            queue.insertBefore(Li,queue.childNodes[0]);
+        } else {
+            alert("请输入数字");
+        }
+    }
+    function rightIn() {
+        var Li = document.createElement("LI");
+        var value = getId("num").value;
+        Li.innerHTML = value;
+        queue.appendChild(Li);
+    }
+    function leftOut() {
+        queue.removeChild(queue.firstChild);
+    }
+    function rightOut() {
+        queue.removeChild(queue.lastChild);
+    }
+</script>
+</body>
+</html>

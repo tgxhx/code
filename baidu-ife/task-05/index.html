@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务五：零基础HTML及CSS编码（二）</title>
+    <style>
+        /*td {
+            border: 1px solid #000000;
+        }*/
+        * {
+            margin: 0;
+            padding: 0;
+            border:none;
+        }
+
+        body {
+            background-color: #333;
+            font-size: 14px;
+        }
+
+        .clear:before,
+        .clear:after {
+            content: '';
+            display: block;
+        }
+
+        .clear:after {
+            clear: both;
+        }
+
+        .clear {
+            *zoom: 1;
+        }
+
+        header {
+            width: 67%;
+            height: 60px;
+            margin: 0 auto;
+            background: #333;
+            min-width:720px;
+
+        }
+
+        header img {
+            float: left;
+            margin: 3px 0 0 20px;
+        }
+
+        header ul {
+            float: right;
+        }
+
+        header ul li {
+            float: left;
+            list-style-type: none;
+            color: #ffffff;
+            display: block;
+            width: 90px;
+            line-height: 60px;
+        }
+
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .warp {
+            background-color: #cccccc;;
+            padding: 20px;
+            width: 67%;
+            margin: 0 auto;
+            position: relative;
+            min-width:720px;
+        }
+
+        div.left {
+            /*float: left;*/
+            /*width:800px;*/
+            margin-right: 420px;
+        }
+
+        .right {
+            /*float: right;*/
+            width: 360px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 20px;
+            background-color: #fff;
+            line-height: 30px;
+        }
+
+        .right h2 {
+            font-size: 16px;
+            font-weight: normal;
+            border-left: 3px solid #aaaaaa;
+            line-height: 40px;
+            text-indent: 20px;
+        }
+
+        .right input {
+            height: 20px;
+        }
+
+        .right .hint {
+            font-size: 12px;
+            color: #888;
+            text-indent: 9.5em;
+        }
+
+        .right .sex {
+            text-indent: 5em;
+        }
+
+        .right .city {
+            text-indent: 5em;
+        }
+
+        .right .hobby {
+            text-indent: 5em;
+        }
+
+        .right .description {
+            text-indent: 3em;
+        }
+
+        .right span {
+            text-indent: 5em;
+        }
+
+        #submit {
+            display: block;
+            width: 360px;
+            height: 40px;
+            background-color: #4d9dff;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        article {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        article h2 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        article .author {
+            text-align: center;
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+
+        article p {
+            text-indent: 2em;
+            line-height: 28px;
+        }
+
+        article img {
+            width: 250px;
+            height: 250px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        div.images {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom:20px;
+        }
+
+        div.images h4 {
+            text-align: center;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        div.image {
+            float: left;
+            padding: 5px;
+            border: 1px solid #888;
+            margin: 10px;
+        }
+
+        div.image img {
+            width: 100px;
+            height: 100px;
+        }
+
+        #article3 ol {
+            margin-left:50px;
+        }
+        #article3 ol li {
+            line-height:30px;
+        }
+        #article3 table {
+            width:100%;
+            border-top:1px solid #aaaaaa;
+            border-left:1px solid #aaaaaa;
+        }
+        #article3 table thead {
+            background-color: #333;
+            color: #ffffff;
+        }
+        #article3 table tr {
+            height:25px;
+            line-height:25px;
+        }
+        #article3 table td {
+            border-right:1px solid #aaaaaa;
+            border-bottom: 1px solid #aaaaaa;
+        }
+        #article3 a {
+            color: #000;
+        }
+        
+        footer {
+            width: 67%;
+            height:50px;
+            line-height:50px;
+            margin: 0 auto;
+            background-color: #333;
+            color: #ffffff;
+            min-width:720px;
+        }
+        footer p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="images/baidu.png" alt="" height="50">
+    <ul>
+        <li><a href="#">导航链接1</a></li>
+        <li><a href="#">导航链接2</a></li>
+        <li><a href="#">导航链接3</a></li>
+        <li><a href="#">导航链接4</a></li>
+    </ul>
+</header>
+<div class="warp">
+    <div class="left">
+        <article>
+            <h2>星际漫游：根植在人类心中的流浪火种</h2>
+            <div class="author">
+                <p>文章作者：卡尔萨根&nbsp;文章发表时间：1977年8月20日</p>
+            </div>
+            <p>
+                1977年8月20日，旅行者2号从美国肯尼迪航天中心发射成功，半个月后的9月5日，旅行者1号也踏上征途，开始了对太阳系的探索。接连的两次发射可以说是在与时间赛跑：176年一遇的行星连珠，让飞行器可以借助引力弹弓效应从一颗行星甩向另一颗行星，用一次发射达到四颗行星，这是旅行者们唯一的发射机会。
+            </p>
+            <p>
+                同样在1977年，科幻大片《星球大战》的上映在全球掀起了太空热潮，人们讨论着太空、银河、飞行器。然而在旅行者号发射之前，人们对太阳系里行星们的了解非常少，只有少数几张稍微清晰的木星照片，至于天王星和海王星，还只是望远镜中暗淡的小白点。直到1990年的情人节，在卡尔萨根的坚持下，旅行者2号调转镜头，才拍到了唯一一张太阳系全家福
+            </p>
+            <p>
+                从57年前月球1号探测器发射到神舟十一号返回地球，人类对太空的探索从未停歇。深空探测并非一项容易的工作，无论是技术上还是从时间周期上，都异常艰难。据统计，一个足够幸运的科学家，一生中也只能参加两个半的深空探测项目。如此艰辛的一项工作，却又有无数科学家前赴后继参与其中。那么，我们为什么要走向深空？未来一百年我们将走向哪里？我们如何走向那里？中国首位卡尔萨根奖得主郑永春博士在他的演讲中回答了这三个问题。
+            </p>
+            <img src="images/logo.jpg" alt=""><br/>
+            <p>
+                1977年8月20日，旅行者2号从美国肯尼迪航天中心发射成功，半个月后的9月5日，旅行者1号也踏上征途，开始了对太阳系的探索。接连的两次发射可以说是在与时间赛跑：176年一遇的行星连珠，让飞行器可以借助引力弹弓效应从一颗行星甩向另一颗行星，用一次发射达到四颗行星，这是旅行者们唯一的发射机会。
+            </p>
+            <p>
+                同样在1977年，科幻大片《星球大战》的上映在全球掀起了太空热潮，人们讨论着太空、银河、飞行器。然而在旅行者号发射之前，人们对太阳系里行星们的了解非常少，只有少数几张稍微清晰的木星照片，至于天王星和海王星，还只是望远镜中暗淡的小白点。直到1990年的情人节，在卡尔萨根的坚持下，旅行者2号调转镜头，才拍到了唯一一张太阳系全家福
+            </p>
+            <p>
+                从57年前月球1号探测器发射到神舟十一号返回地球，人类对太空的探索从未停歇。深空探测并非一项容易的工作，无论是技术上还是从时间周期上，都异常艰难。据统计，一个足够幸运的科学家，一生中也只能参加两个半的深空探测项目。如此艰辛的一项工作，却又有无数科学家前赴后继参与其中。那么，我们为什么要走向深空？未来一百年我们将走向哪里？我们如何走向那里？中国首位卡尔萨根奖得主郑永春博士在他的演讲中回答了这三个问题。
+            </p>
+        </article>
+        <article>
+            <h2>星际漫游：根植在人类心中的流浪火种</h2>
+            <div class="author">
+                <p>文章作者：卡尔萨根&nbsp;文章发表时间：1977年8月20日</p>
+            </div>
+            <p>
+                1977年8月20日，旅行者2号从美国肯尼迪航天中心发射成功，半个月后的9月5日，旅行者1号也踏上征途，开始了对太阳系的探索。接连的两次发射可以说是在与时间赛跑：176年一遇的行星连珠，让飞行器可以借助引力弹弓效应从一颗行星甩向另一颗行星，用一次发射达到四颗行星，这是旅行者们唯一的发射机会。
+            </p>
+            <p>
+                同样在1977年，科幻大片《星球大战》的上映在全球掀起了太空热潮，人们讨论着太空、银河、飞行器。然而在旅行者号发射之前，人们对太阳系里行星们的了解非常少，只有少数几张稍微清晰的木星照片，至于天王星和海王星，还只是望远镜中暗淡的小白点。直到1990年的情人节，在卡尔萨根的坚持下，旅行者2号调转镜头，才拍到了唯一一张太阳系全家福
+            </p>
+            <p>
+                从57年前月球1号探测器发射到神舟十一号返回地球，人类对太空的探索从未停歇。深空探测并非一项容易的工作，无论是技术上还是从时间周期上，都异常艰难。据统计，一个足够幸运的科学家，一生中也只能参加两个半的深空探测项目。如此艰辛的一项工作，却又有无数科学家前赴后继参与其中。那么，我们为什么要走向深空？未来一百年我们将走向哪里？我们如何走向那里？中国首位卡尔萨根奖得主郑永春博士在他的演讲中回答了这三个问题。
+            </p>
+            <img src="images/logo.jpg" alt=""><br/>
+            <p>
+                1977年8月20日，旅行者2号从美国肯尼迪航天中心发射成功，半个月后的9月5日，旅行者1号也踏上征途，开始了对太阳系的探索。接连的两次发射可以说是在与时间赛跑：176年一遇的行星连珠，让飞行器可以借助引力弹弓效应从一颗行星甩向另一颗行星，用一次发射达到四颗行星，这是旅行者们唯一的发射机会。
+            </p>
+            <p>
+                同样在1977年，科幻大片《星球大战》的上映在全球掀起了太空热潮，人们讨论着太空、银河、飞行器。然而在旅行者号发射之前，人们对太阳系里行星们的了解非常少，只有少数几张稍微清晰的木星照片，至于天王星和海王星，还只是望远镜中暗淡的小白点。直到1990年的情人节，在卡尔萨根的坚持下，旅行者2号调转镜头，才拍到了唯一一张太阳系全家福
+            </p>
+            <p>
+                从57年前月球1号探测器发射到神舟十一号返回地球，人类对太空的探索从未停歇。深空探测并非一项容易的工作，无论是技术上还是从时间周期上，都异常艰难。据统计，一个足够幸运的科学家，一生中也只能参加两个半的深空探测项目。如此艰辛的一项工作，却又有无数科学家前赴后继参与其中。那么，我们为什么要走向深空？未来一百年我们将走向哪里？我们如何走向那里？中国首位卡尔萨根奖得主郑永春博士在他的演讲中回答了这三个问题。
+            </p>
+        </article>
+        <div class="images clear">
+            <h2>图片</h2>
+            <div class="image">
+                <h4>好看的图片</h4>
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <div class="image">
+                <h4>好看的图片</h4>
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <div class="image">
+                <h4>好看的图片</h4>
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <div class="image">
+                <h4>好看的图片</h4>
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <div class="image">
+                <h4>好看的图片</h4>
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <div class="image">
+                <h4>好看的图片</h4>
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <div class="image">
+                <h4>好看的图片</h4>
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <div class="image">
+                <h4>好看的图片</h4>
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <div class="image">
+                <h4>好看的图片</h4>
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <div class="image">
+                <h4>好看的图片</h4>
+                <img src="images/logo.jpg" alt="">
+            </div>
+        </div>
+        <article id="article3">
+            <h2>星际漫游：根植在人类心中的流浪火种</h2>
+            <div class="author">
+                <p>文章作者：卡尔萨根&nbsp;文章发表时间：1977年8月20日</p>
+            </div>
+            <p>
+                1977年8月20日，旅行者2号从美国肯尼迪航天中心发射成功，半个月后的9月5日，旅行者1号也踏上征途，开始了对太阳系的探索。接连的两次发射可以说是在与时间赛跑：176年一遇的行星连珠，让飞行器可以借助引力弹弓效应从一颗行星甩向另一颗行星，用一次发射达到四颗行星，这是旅行者们唯一的发射机会。
+            </p>
+            <p>
+                同样在1977年，科幻大片《星球大战》的上映在全球掀起了太空热潮，人们讨论着太空、银河、飞行器。然而在旅行者号发射之前，人们对太阳系里行星们的了解非常少，只有少数几张稍微清晰的木星照片，至于天王星和海王星，还只是望远镜中暗淡的小白点。直到1990年的情人节，在卡尔萨根的坚持下，旅行者2号调转镜头，才拍到了唯一一张太阳系全家福
+            </p>
+            <p>
+                从57年前月球1号探测器发射到神舟十一号返回地球，人类对太空的探索从未停歇。深空探测并非一项容易的工作，无论是技术上还是从时间周期上，都异常艰难。据统计，一个足够幸运的科学家，一生中也只能参加两个半的深空探测项目。如此艰辛的一项工作，却又有无数科学家前赴后继参与其中。那么，我们为什么要走向深空？未来一百年我们将走向哪里？我们如何走向那里？中国首位卡尔萨根奖得主郑永春博士在他的演讲中回答了这三个问题。
+            </p>
+            <ol>
+                <li>排名1</li>
+                <li>排名2</li>
+                <li>排名3</li>
+            </ol>
+            <table border="0" cellspacing="0" cellpadding="0">
+                <thead>
+                <tr>
+                    <td>表头</td>
+                    <td>表头</td>
+                    <td>表头</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="#">操作</a></td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="#">操作</a></td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="#">操作</a></td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="#">操作</a></td>
+                </tr>
+                <tr>
+                    <td>总计</td>
+                    <td colspan="2">1000</td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
+    </div>
+    <div class="right">
+        <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
+        <form action="">
+            请输入邮箱地址：
+            <input type="text" name="这是一个文本输入框" id="">
+            <p class="hint">邮箱地址请按照要求格式输入</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入密码：
+            <input type="password" name="这是一个密码框" id="">
+            <br/>
+            请重复输入密码：
+            <input type="password" name="这是一个密码框" id="">
+            <p class="hint">密码请填6-16为英文字母和数字</p>
+            <br/>
+            <p class="sex">
+                性别：<input type="radio" value="男">男
+                <input type="radio" value="女">女
+            </p>
+            <p class="city">
+                城市：<select name="City" id="city">
+                <option value="">北京</option>
+                <option value="">上海</option>
+                <option value="">广州</option>
+                <option value="">深圳</option>
+            </select>
+            </p>
+            <p class="hobby">
+                爱好：
+                <input type="checkbox" name="运动" value="运动">
+                <input type="checkbox" name="">
+                <input type="checkbox" name="">
+            </p>
+            <p class="description">
+                <span>个人描述：</span><textarea name="多行输入框" cols="20" rows="3"></textarea>
+                <br/>
+                <input type="submit" value="确认提交" id="submit">
+        </form>
+    </div>
+</div>
+<footer>
+    <p>版权所有&copy;</p>
+</footer>
+</body>
+</html>
