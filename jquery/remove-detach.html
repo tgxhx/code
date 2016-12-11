@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>remove-detach</title>
+	<script src="./jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("p").click(function (e) {
+				alert(e.target.innerHTML);
+			});
+			$("#bt1").click(function () {
+				var p = $("p:first").remove();
+				p.css('color','red').text('p1通过remove处理后,点击该元素,事件丢失');
+				$("body").append(p);
+			});
+			$("#bt2").click(function () {
+				var p = $("p:first").detach();
+				p.css('color','blue').text('p2通过detach处理后,点击该元素,事件未丢失');
+				$("body").append(p);
+			});
+		});
+	</script>
+	<style>
+		p {
+			width: 500px;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<h2 style="width:510px;">给页面给页面2个p元素节点绑定点击事件,点击后弹出自己本身的节点内容</h2>
+	<p>元素p1，同时绑定点击事件</p>
+	<p>元素p2，同时绑定点击事件</p>
+	<h3>通过点击2个按钮后观察方法处理的区别</h3>
+	<button id="bt1">点击通过remove处理元素P1</button>
+	<button id="bt2">点击通过detach处理元素P2</button>
+</body>
+</html>

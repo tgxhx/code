@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>clone()</title>
+    <script src="./jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(".div1").click(function() {
+        	console.log(0)
+            $(".class").append($(this).clone().css('color', 'red'));
+        });
+        $(".div2").click(function() {
+        	console.log(1);
+            $(".class").append($(this).clone(true).css('color', 'blue'));
+        });
+    });
+    </script>
+    <style>
+	.class {
+		width: 300px;
+		height: 120px;
+	}
+    .class div {
+        width: 100px;
+        height: 90px;
+        background-color: #bbffaa;
+        border: 1px solid black;
+        float: left;
+        padding: 5px;
+        margin: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <h2>通过clone克隆元素</h2>
+    <div class="class">
+        <div class="div1">点击clone浅拷贝</div>
+        <div class="div2">点击clone深拷贝，可以继续触发创建</div>
+    </div>
+</body>
+
+</html>

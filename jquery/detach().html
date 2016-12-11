@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>detach()</title>
+    <script src="./jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var p;
+        $("button:first").on("click", function() {
+            if (!$("p").length) return;
+            p = $("p").detach();
+        })
+        $("button:last").on("click", function() {
+            $("body").append(p);
+        })
+    });
+    </script>
+    <style>
+    p {
+        color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <p>P元素1，默认给绑定一个点击事件</p>
+    <p>P元素2，默认给绑定一个点击事件</p>
+    <button>点击删除P元素</button>
+    <button>点击移动P元素</button>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

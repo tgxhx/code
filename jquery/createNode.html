@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery创建节点</title>
+    <script src="./jquery-2.1.1.min.js"></script>
+    <style>
+    .right {
+        width: 150px;
+        height: 150px;
+        background-color: yellow;
+        border: 1px solid black;
+        padding: 5px;
+        margin: 5px;
+        margin-left: 0px;
+        float: left;
+    }
+
+    </style>
+</head>
+
+<body>
+    <button>点击通过jQuery动态创建元素节点</button>
+    <script type="text/javascript">
+    var $body = $("body");
+
+    $("button").on("click", function() {
+        var div = $('<div class="right"><div class="aaron">动态创建DIV元素节点</div></div>');
+        $body.append(div);
+    });
+    </script>
+    <p>测试文字</p>
+</body>
+
+</html>

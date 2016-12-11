@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>empty()</title>
+	<script src="./jquery-2.1.1.min.js"></script>
+	<style>
+		#id1 {
+			background: #bbffaa;
+		}
+	</style>
+</head>
+<body>
+	<h2>通过empty移除元素</h2>
+	<div id="id1">
+		<p id="class1">P元素1</p>
+		<p id="class2">P元素2</p>
+	</div>
+	<button id="bt1">点击通过jQuery的empty移除元素</button>
+	<script type="text/javascript">
+		$("#bt1").on("click",function () {
+			$("#id1").empty();
+		})
+	</script>
+</body>
+</html>

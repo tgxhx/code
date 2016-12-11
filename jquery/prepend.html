@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>prepend和prependTo</title>
+	<script src="./jquery-2.1.1.min.js"></script>
+	<style>
+		#arron1 {
+			border: 1px solid red;
+		}
+		#arron2 {
+			border: 1px solid blue;
+		}
+		#arron1 p {
+			color: red;
+		}
+		#arron2 p {
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<h2>通过prepend与prependTo添加元素</h2>
+	<button id="bt1">点击通过jQuery的prepend添加元素</button>
+	<button id="bt2">点击通过jQuery的prependTo添加元素</button>
+	<div id="arron1">
+		<p>测试prepend</p>
+	</div>
+	<div id="arron2">
+		<p>测试prependTo</p>
+	</div>
+	<script type="text/javascript">
+		$("#bt1").on("click",function () {
+			$("#arron1").prepend('<p>prepend增加的p元素</p>');
+			$("#arron1").append('<p>append增加的p元素</p>');
+		})
+		$("#bt2").on("click",function () {
+			$('<p>prependTo增加的p元素</p>').prependTo("#arron2");
+			$('<p>appendTo增加的p元素</p>').appendTo("#arron2");
+		})
+	</script>
+</body>
+</html>

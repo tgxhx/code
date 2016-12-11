@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>hile(slow)</title>
+    <script src="./jquery-2.1.1.min.js"></script>
+    <script>
+    // $(document).ready(function () {
+    // 	$(".ex .hide").click(function () {
+    // 		$(this).parents(".ex").hide("slow");
+    // 	});
+    // });
+    $(document).ready(function() {
+        $(".ex .hide").click(function() {
+            $(this).parents(".ex").hide("slow");
+        });
+    });
+    </script>
+    <style>
+    div.ex {
+        background-color: #e5eecc;
+        padding: 7px;
+        border: 1px solic #c3c3c3;
+        width: 500px;
+    }
+    </style>
+</head>
+
+<body>
+    <h3>Google</h3>
+    <div class="ex">
+        <button class="hide">点我隐藏</button>
+        <p>站点名：Google
+            <br />站点URL：https://www.google.com</p>
+    </div>
+    <h3>菜鸟教程</h3>
+    <div class="ex">
+        <button class="hide">点我隐藏</button>
+        <p>站点名：菜鸟教程
+            <br />站点URL：http://www.runoob.com</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>replaceWith-replaceAll</title>
+	<script src="./jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#bt1").click(function () {
+				console.log(0)
+				$(".right > div:first p:eq(1)").replaceWith('<a style="color:red">replaceWith替换第二段的内容</a>')
+			})
+			$("#bt2").click(function () {
+				console.log(1)
+				$('<a style="color:red">replaceAll替换第六段的内容</a>').replaceAll(".right >div:last p:last")
+			})
+		})
+	</script>
+	<style>
+		.right div {
+			width: 500px;
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<h2>replaceWith()和replaceAll()</h2>
+	<div class="left">
+		<button id="bt1">点击，通过replaceWith替换内容</button>
+		<button id="bt2">点击，通过replaceAll替换内容</button>
+	</div>
+	<div class="right">
+		<div>
+			<p>第一段</p>
+			<p>第二段</p>
+			<p>第三段</p>
+		</div>
+		<div>
+			<p>第四段</p>
+			<p>第五段</p>
+			<p>第六段</p>
+		</div>
+	</div>
+</body>
+</html>
