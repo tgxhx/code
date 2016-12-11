@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bing</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #333;
+            position: relative;
+        }
+
+        .bg-div {
+            background-image: url("images/ZhGEqAP.jpg");
+            width: 1850px;
+            height: 981px;
+            margin: 0 auto;
+            /*margin-top: 10px;*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: relative;
+        }
+
+        .logo {
+            background-image: url("images/logo.png");
+            width: 107px;
+            height: 53px;
+            float: left;
+            margin: -4px 18px 0 0;
+        }
+
+        form {
+            float: left;
+            background-color: #fff;
+            padding: 5px;
+        }
+
+        .search-input-text {
+            border: 0;
+            float: left;
+            height: 25px;
+            line-height: 35px;
+            width: 350px;
+        }
+
+        .search-input-button {
+            border: 0;
+            background-image: url("images/search-button.png");
+            width: 29px;
+            height: 29px;
+            float: left;
+            cursor: pointer;
+        }
+
+        .search-box {
+            position: absolute;
+            top: 25%;
+            left: 20%;
+        }
+
+        .suggest {
+            background-color: #fff;
+            width: 387px;
+            border: 1px solid #999;
+        }
+
+        .suggest ul li {
+            height: 35px;
+            line-height: 35px;
+            text-indent: 5px;
+            list-style-type: none;
+        }
+
+        .suggest ul li:hover {
+            background-color: #dddddd;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="bg-div">
+    <div class="search-box">
+        <div class="logo"></div>
+        <form action="" id="search-form">
+            <input type="text" name="" id="search-input" class="search-input-text">
+            <input type="submit" value="" class="search-input-button">
+        </form>
+    </div>
+</div>
+<div class="suggest" id="search-suggest" style="display: none;">
+    <ul id="search-result">
+        <li><a href="">搜索结果1</a></li>
+        <li><a href="">搜索结果2</a></li>
+        <li><a href="">搜索结果3</a></li>
+        <li><a href="">搜索结果4</a></li>
+        <li><a href="">搜索结果5</a></li>
+    </ul>
+</div>
+<script>
+    //通过ID获取元素
+    var getDOM = function (id) {
+        return document.getElementById(id);
+    }
+    //绑定事件，解决兼容性
+    var addEvent = function (id, event, fn) {
+        var el = getDOM(id) || document;
+        if (el.addEventListener) {
+            el.addEventListener(event, fn, false);
+        } else if (el.attachEvent) {
+            el.attachEvent("on" + event, fn);
+        }
+    }
+    //获取元素（form表单）左边与浏览器左边的距离，等于form表单的offsetLeft加父元素的offsetLeft
+    var getElementLeft = function (element) {
+        var actualLeft = element.offsetLeft;
+        var current = element.offsetParent;
+        while (current !== null) {
+            actualLeft += current.offsetLeft;
+            current = current.offsetParent;
+        }
+        return actualLeft;
+    }
+    //获取到浏览器顶部距离
+    var getElementTop = function (element) {
+        var actualTop = element.offsetTop;
+        var current = element.offsetParent;
+        while (current !== null) {
+            actualTop += current.offsetTop;
+            current = current.offsetParent;
+        }
+        return actualTop;
+    }
+    //ajax get
+    var ajaxGet = function (url, callback) {
+        var _xhr = null;
+        if (window.XMLHttpRequest) {
+            _xhr = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            _xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        _xhr.onreadystatechange = function () {
+            if (_xhr.readyState == 4 && _xhr.status == 200) {
+                callback(JSON.parse(_xhr.responseText));
+                //JSON解析字符串
+            }
+        }
+        _xhr.open("GET", url, true);
+        _xhr.send();
+    }
+    //事件代理，为多个动态元素绑定事件
+    var delegateEvent = function (target, event, fn) {
+        addEvent(document, event, function (e) {
+            if (e.target.nodeName == target.toUpperCase()) {
+                fn.call(e.target);
+            }
+        })
+    }
+    //隐藏一个元素
+    var hide = function (obj) {
+        obj.style.display = "none";
+    }
+    addEvent("search-input", "keyup", function () {
+        //获取搜索框的值
+        var searchText = getDOM("search-input").value;
+        ajaxGet('http://api.bing.com/qsonhs.aspx?q=' + searchText, function (data) {
+            //将json数据赋值给data，数组
+            var data = data.AS.Results[0].Suggests;
+            var html = "";
+            for (var i = 0; i < data.length; i++) {
+                //遍历data，获取txt拼接成多个<li>，复制给html
+                html += "<li>" + data[i].Txt + "</li>";
+            }
+            //多个getDom("search-suggest")，赋值给临时变量
+            var _dom = getDOM("search-suggest");
+            //将html复制给search-result
+            getDOM("search-result").innerHTML = html;
+            //设置search-suggest定位
+            _dom.style.left = getElementLeft(getDOM("search-form")) + "px";
+            _dom.style.top = getElementTop(getDOM("search-form")) + 39 + "px";
+            _dom.style.position = "absolute";
+            _dom.style.display = "block";
+        });
+        //搜索框为空时隐藏search-suggest
+        if (searchText = " ") {
+            hide(getDOM("search-suggest"));
+        }
+    });
+    //为search-suggest的li添加点击跳转事件
+    delegateEvent("li", "click", function () {
+        var keyword = this.innerHTML;
+        //设置当前页面url
+        location.href = "https://cn.bing.com/search?q=" + keyword;
+    });
+    //点击document隐藏search-suggest
+    addEvent("document", "click", function () {
+        hide(getDOM("search-suggest"));
+    })
+    /*document.onclick = function () {
+     document.getElementById("search-suggest").style.display = "none";
+     }*/
+</script>
+</body>
+</html>
