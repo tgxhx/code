@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大图片背景</title>
+	<style>
+		#test1 {
+			width: 500px;
+			height: 500px;
+			border: 2px solid orange;
+			background-image: url(firefox.jpg);
+			background-repeat: no-repeat;
+			background-position: right center;
+		}
+		#test2 {
+			width: 100px;
+			height: 100px;
+			border: 2px solid red;
+			/* background-image: url(bg.png);
+			background-repeat: no-repeat;
+			background-position: -100px -400px; */
+			background: gray url(bg.png) no-repeat -120px -420px;
+		}
+	</style>
+</head>
+<body>
+	<div id="test1"></div>
+	<div id="test2"></div>
+</body>
+</html>

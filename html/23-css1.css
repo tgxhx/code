@@ -1,0 +1,6 @@
+@import url(23-css2.css);
+#test {
+	width: 200px;
+	height: 200px;
+	background: green;
+}

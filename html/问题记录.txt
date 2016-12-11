@@ -1,0 +1,47 @@
+1、css有几种引入方式
+
+三种：
+(1) 引入样式表，引入方式如下
+<link href="css/style.css" rel="stylesheet" type="text/css">
+(2) 在html头部用<style></style>包起来，在里面编写样式：
+		<style type="text/css">
+        	*{
+        		padding: 0;margin: 0
+        	}
+        </style>
+(3) 在标签里面直接编写行内样式
+<div style='color:#333'></div>
+
+2、div除了可以声明id来控制，还可以声明什么控制?
+
+div除了用ID赋予它一个名称外，还可以用class来赋予它一个名称。 还可以不用赋予它一个名字，直接用style来直接设定它的样式。
+唯一区别就是ID是唯一的，只能用一次。反而CLASS是可以反复使用的，可以多个div同时时候class来定义样式。
+
+3、如何让2个div并排显示
+
+设置float:left属性
+
+4、田字格布局
+03-float-1.html
+
+5、如果父div中，有两个子div是浮动的，父div的高度有没有被子div撑起来，父div是多高
+
+0
+
+6、用CSS控制画一个三角形
+08-trip.html
+
+7、盒子的宽高各是100px，同时盒子有30px的padding值，再设置背景为灰色，灰色的面积是多大
+
+8、如果布局已完成，且像素正好相容，如果突然增加padding，可能导致什么情况发生，解决办法
+
+9、背景与背景色都存在显示谁？
+显示背景图
+
+10、有的网站，既设置背景图，又设置背景色，为什么？
+
+11、除了img还有哪些替换元素 w3c replaced element
+http://www.cnblogs.com/wkylin/archive/2011/05/12/2044328.html
+
+12、初始化css后，写li，并用背景图片+padding，来完成li小图标的效果，且达到各浏览器兼容的效果
+28-ul-ol.html
