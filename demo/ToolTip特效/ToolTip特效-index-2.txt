@@ -1,0 +1,21 @@
+//obj - ToolTip超链接元素
+//id - ToolTip提示框id
+//html - Tooltip提示框Html
+//width - 提示框高度 （可选）
+//height - 提示框高度（可选）
+showDiv函数 {
+
+判断div是否存在
+存在设为none
+不存在：
+创建div，设置class id innerHTML 添加到obj中
+设置div的width，height  通过三元运算符判断w、h是否存在，不存在设为auto，存在需要加"px"
+
+设置div为absolute，left为offsetLeft，top为offsetTop
+
+判断是否为ie，为ie设置w为offsetWidth
+
+onmouseleave时display为none
+}
+
+超链接设置onmouseenter，执行showDiv

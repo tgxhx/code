@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动展开</title>
+    <style>
+        body {
+            margin:0 auto;
+            padding:0;
+        }
+        #panel {
+            width: auto;
+            height: 120px;
+            margin: 0 auto;
+            padding: 10px 0;
+            background-color: #cccccc;
+            text-align: center;
+            overflow: hidden;
+            display: none;
+        }
+
+        #wel {
+            width: 1000px;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 auto;
+            padding: 10px 0;
+            background-color: #666;
+            color: #FFFFFF;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            addW();
+            setTimeout("subW()", 5000);
+        }
+        var w = 0;
+        function addW() {
+            if (w < 1000) {
+                w += 20;
+                document.getElementById("panel").style.display = "block";
+                document.getElementById("panel").style.width = w + "px";
+                console.log(w);
+            } else {
+                return;
+            }
+            setTimeout("addW()", 40);
+        }
+
+        function subW() {
+            if (w > 0) {
+                w -= 20;
+                document.getElementById("panel").style.width = w + "px";
+                console.log(w);
+            } else {
+                document.getElementById("panel").style.display = "none";
+                return;
+            }
+            setTimeout("subW()", 40);
+        }
+    </script>
+</head>
+<body>
+<div id="panel">
+    <h1>欢迎来到慕课网</h1>
+    <h2>大幅广告</h2>
+</div>
+<div id="wel">慕课网欢迎你</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>青蛙爬井 - zehee无聊</title>
+    <style type="text/css">
+        <!--
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #well {
+            width: 20px;
+            border: 1px solid #993300;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top:-101px;
+            margin-left:-11px;
+        }
+
+        #frog {
+            background: #006600;
+            text-align: center;
+            color: #FFFFFF;
+            position: relative;
+            top: 200px
+        }
+
+        -->
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+                i = 1;
+                for (h = 200; h > 0; comeon()) {
+                    alert("现在是第 " + i + " 天！");
+                }
+            }
+        function comeon() {
+            day();
+            if (h <= 0) {
+                alert("自由啦！一共用时 " + i + " 天！");
+                return false;
+            }
+            night();
+            if (h <= 0) {
+                alert("自由啦！一共用时 " + i + " 天！");
+                return false;
+            }
+            i++;
+        }
+        function day() {
+            var frog = document.getElementById("frog");
+            document.body.style.background = "#fff";
+            h = h - 30;
+            alert("经过白天努力距离井口还有 " + h / 10 + " 米。");
+            frog.style.top = h + "px";
+        }
+        function night() {
+            var frog = document.getElementById("frog");
+            document.body.style.background = "#000";
+            h = h + 20;
+            alert("晚上打盹了距离井口还有 " + h / 10 + " 米。");
+            frog.style.top = h + "px";
+        }
+    </script>
+</head>
+<body>
+<div id="well">
+    <p id="frog">F</p>
+</div>
+</body>
+</html>
