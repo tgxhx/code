@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>模态框插件</title>
+    <link rel="stylesheet" href="bootstrap-3.3.0/dist/css/bootstrap.css">
+    <style>
+
+    </style>
+</head>
+<body style="margin: 100px;">
+<!--模态框声明-->
+<div class="modal fade" id="myModal" tabindex="-1">
+    <!--窗口声明-->
+    <div class="modal-dialog">
+        <!--内容声明  modal-sm大小-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--data-dismiss="modal"关闭-->
+                <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                <!--有间距，加上.modal-title-->
+                <h4 class="modal-title">会员登录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">1</div>
+                        <div class="col-md-4">2</div>
+                        <div class="col-md-4">3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default">注册</button>
+                <button class="btn btn-primary">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--data-toggle="modal" data-target="#myModal"点击弹窗-->
+<button class="btn btn-primary btn-lg" id="btn">点击弹窗</button>
+
+<script src="jquery-3.1.1.js"></script>
+<script src="bootstrap-3.3.0/dist/js/bootstrap.js"></script>
+<script>
+    $("#btn").on("click", function () {
+        $("#myModal").modal("show");
+    })
+    $("#myModal").modal({
+        show: false,
+        keyboard: false
+    });
+    $("#myModal").on("show.bs.modal", function () {
+        alert("在show方法调用时立即触发");
+    })
+    $("#myModal").on("shown.bs.modal", function () {
+        alert("在模态框显示完毕后触发");
+    })
+    $("#myModal").on("hide.bs.modal", function () {
+        confirm("确定关闭窗口吗？")
+    })
+    $("#myModal").on("hidden.bs.modal",function () {
+        alert("在模态框关闭后触发");
+    })
+</script>
+</body>
+</html>

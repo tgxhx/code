@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>响应式导航</title>
+    <link rel="stylesheet" href="bootstrap-3.3.0/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="20-style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand logo">
+                <img src="img/baidu.png" height="40"/>
+            </a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right" style="margin-top:0;">
+                <li class="active"><a href=""><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-th-list"></span> 资讯</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-signal"></span> 案例</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-question-sign"></span> 关于</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="img/landspace1.jpg" alt="第一张"/>
+        </div>
+        <div class="item">
+            <img src="img/landspace2.jpg" alt="第二张"/>
+        </div>
+        <div class="item">
+            <img src="img/landspace3.jpg" alt="第三张"/>
+        </div>
+        <div class="item">
+            <img src="img/landspace4.jpg" alt="第四张"/>
+        </div>
+    </div>
+    <a href="#myCarousel" data-slide="prev" class="carousel-control left">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a href="#myCarousel" data-slide="next" class="carousel-control right">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+
+<div class="tab1">
+    <div class="container">
+        <h2 class="tab-h2">习近平新年警告：不能“上演霸王别姬”</h2>
+        <p class="tab-p">落实好全会精神，必须更加深入地认识和把握全面从严。</p>
+        <div class="row">
+            <div class="col-lg-6 col">
+                <div class="media">
+                    <div class="media-left">
+                        <a href=""><img src="img/2-small.jpg"/></a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">课程内容</h4>
+                        <p class="text-muted">Open GApps wishes all of you a Happy New Year </p>
+                        <p>the year brought us a lot of new things, e.g. Nougat (both 7.0 and 7.1) !</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col">
+                <div class="media">
+                    <div class="media-left">
+                        <a href=""><img src="img/2-small.jpg"/></a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">课程内容</h4>
+                        <p class="text-muted">Open GApps wishes all of you a Happy New Year and the best for
+                            2017!Looking back at 2016, </p>
+                        <p>the year brought us a lot of new things, e.g. Nougat (both 7.0 and 7.1)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col">
+                <div class="media">
+                    <div class="media-left">
+                        <a href=""><img src="img/2-small.jpg"/></a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">课程内容</h4>
+                        <p class="text-muted">Open GApps wishes all of you a Happy New Year</p>
+                        <p>the year brought us a lot of new things, e.g. Nougat (both 7.0 and 7.1)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col">
+                <div class="media">
+                    <div class="media-left">
+                        <a href=""><img src="img/2-small.jpg"/></a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">课程内容</h4>
+                        <p class="text-muted">Open GApps wishes all of you a Happy New Year</p>
+                        <p>the year brought us a lot of new things, e.g. Nougat (both 7.0 and 7.1)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tab2">
+    <div class="container">
+        <div class="row">
+            <!--tab2-img默认跟tab2-text调换位置，大于768px时使用float-->
+            <div class="col-lg-6 col-md-6 col-sm-6 tab2-img">
+                <img src="img/icon1.png" class="img img-responsive center-block" alt=""/>
+            </div>
+            <div class="text col-lg-6 col-md-6 col-sm-6 tab2-text">
+                <h3>课程内容</h3>
+                <p>Open GApps wishes all of you a Happy New Year</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tab3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <img src="img/icon2.png" class="img img-responsive center-block" alt=""/>
+            </div>
+            <div class="text col-lg-6 col-md-6 col-sm-6 tab3-text">
+                <h3>课程内容</h3>
+                <p>Open GApps wishes all of you a Happy New Year</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+    <div class="container">
+        <p>企业培训 | 合作事宜 | 版权投诉</p>
+        <p> &copy;2017 Baidu 贴吧协议 | 吧主制度 | 意见反馈 | 网络谣言警示 </p>
+    </div>
+</div>
+
+
+<script src="jquery-3.1.1.js"></script>
+<script src="bootstrap-3.3.0/dist/js/bootstrap.js"></script>
+<script>
+    $(function () {
+        //自动播放
+        $("#myCarousel").carousel({
+            interval: 4000
+        });
+
+        /*//设置垂直居中
+         $(".carousel-control").css('line-height', $('.carousel-inner img').height() + "px");
+         $(window).resize(function () {
+         var $height = $('.carousel-inner img').eq(0).height() ||
+         $('.carousel-inner img').eq(1).height() ||
+         $('.carousel-inner img').eq(2).height() ||
+         $('.carousel-inner img').eq(3).height();
+         $(".carousel-control").css('line-height', $height + "px");
+         });*/
+
+        /*设置文字垂直居中*/
+        $(".text").eq(0).css("margin-top", ($(".img").eq(0).height() - $(".text").eq(0).height()) / 2);
+        $(window).resize(function () {
+            $(".text").eq(0).css("margin-top", ($(".img").eq(0).height() - $(".text").eq(0).height()) / 2);
+        });
+
+        $(".text").eq(1).css("margin-top", ($(".img").eq(1).height() - $(".text").eq(1).height()) / 2);
+        $(window).resize(function () {
+            $(".text").eq(1).css("margin-top", ($(".img").eq(1).height() - $(".text").eq(1).height()) / 2);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>16-弹出框插件</title>
+    <link rel="stylesheet" href="bootstrap-3.3.0/dist/css/bootstrap.css">
+    <style>
+        a:focus {
+            outline: none;
+        }
+        .view {
+            width:300px;
+            height:100px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body style="padding:  200px;">
+
+<div class="view">
+    <button class="btn btn-danger btn-lg"
+            data-toggle="popover"
+            title="Bootstrap"
+            data-content="Bootstrap是Twitter推出的一个用于前端开发的开源工具包。它由Twitter的设计师Mark Otto和Jacob Thornton合作开发,是一个CSS/HTML框架。目前,Bootstrap最新版本为3.0 。"
+            data-placement="right"
+    >点击弹出/隐藏弹出框</button>
+</div>
+
+<script src="jquery-3.1.1.js"></script>
+<script src="bootstrap-3.3.0/dist/js/bootstrap.js"></script>
+<script>
+    $("button").popover({
+        viewport: '.view'
+    });
+</script>
+</body>
+</html>

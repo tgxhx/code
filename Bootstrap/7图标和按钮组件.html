@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>图标和按钮组件</title>
+    <link rel="stylesheet" href="bootstrap-3.3.0/dist/css/bootstrap.css">
+    <style>
+        .a {
+            height: 50px;
+            border: 1px solid #ccc;
+            background-color: #EEEEEE;
+        }
+    </style>
+</head>
+<body style="margin: 50px;">
+
+<i class="glyphicon glyphicon-star"></i>
+<span class="glyphicon glyphicon-remove"></span>
+<span class="glyphicon glyphicon-warning-sign"></span>
+
+
+<button class="btn btn-lg">
+    <i class="glyphicon glyphicon-adjust"></i>
+</button>
+
+
+<div class="dropdown ">
+    <button class="btn btn-default" data-toggle="dropdown">
+        下拉菜单
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li class="dropdown-header">网站导航</li>
+        <li><a href="">首页</a></li>
+        <li><a href="">资讯</a></li>
+        <li class="divider"><a href="">产品</a></li>
+        <li class="disabled"><a href="">关于</a></li>
+    </ul>
+</div>
+
+<!--嵌套分组 div.dropdown改成div.btn-group，button增加.dropdown-toggle-->
+<!--<div class="btn-group">
+    <button class="btn btn-default">左</button>
+    <button class="btn btn-default">中</button>
+    <button class="btn btn-default">右</button>
+    <button class="btn btn-info">1</button>
+    <button class="btn btn-danger">2</button>
+    <div class="btn-group ">
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            下拉菜单
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li class="dropdown-header">网站导航</li>
+            <li><a href="">首页</a></li>
+            <li><a href="">资讯</a></li>
+            <li class="divider"><a href="">产品</a></li>
+            <li class="disabled"><a href="">关于</a></li>
+        </ul>
+    </div>
+</div>-->
+
+<!--不能用button-->
+<div class="btn-group-justified">
+    <a class="btn btn-default">左</a>
+    <a class="btn btn-default">中</a>
+    <a class="btn btn-default">右</a>
+</div>
+
+
+<div class="btn-group ">
+    <button class="btn btn-default">下拉菜单</button>
+    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li class="dropdown-header">网站导航</li>
+        <li><a href="">首页</a></li>
+        <li><a href="">资讯</a></li>
+        <li class="divider"><a href="">产品</a></li>
+        <li class="disabled"><a href="">关于</a></li>
+    </ul>
+</div>
+
+
+<script src="jquery-3.1.1.js"></script>
+<script src="bootstrap-3.3.0/dist/js/bootstrap.js"></script>
+</body>
+</html>

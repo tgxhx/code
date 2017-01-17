@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>15-标签页插件</title>
+    <link rel="stylesheet" href="bootstrap-3.3.0/dist/css/bootstrap.css">
+    <style>
+        a:focus {
+            outline:none;
+        }
+    </style>
+</head>
+<body style="padding: 0 200px;">
+
+<!--
+<ul class="nav nav-pills">
+    <li class="active"><a href="#html5" data-toggle="tab">Html5</a></li>
+    <li><a href="#bootstrap" data-toggle="tab">Bootstrap</a></li>
+    <li><a href="#jquery" data-toggle="tab">jQuery</a></li>
+    <li><a href="#extjs" data-toggle="tab">ExtJS</a></li>
+</ul>
+-->
+
+<!--<ul class="nav nav-tabs">
+        <li class="active"><a href="#html5" data-toggle="tab">Html5</a></li>
+        <li><a href="#bootstrap" data-toggle="tab">Bootstrap</a></li>
+        <li><a href="#jquery" data-toggle="tab">jQuery</a></li>
+        <li><a href="#extjs" data-toggle="tab">ExtJS</a></li>
+</ul>-->
+
+<ul class="nav nav-tabs" id="nav">
+    <li class="active"><a href="#html5">Html5</a></li>
+    <li><a href="#bootstrap">Bootstrap</a></li>
+    <li><a href="#jquery">jQuery</a></li>
+    <li><a href="#extjs">ExtJS</a></li>
+</ul>
+
+<div class="tab-content" style="padding: 0 10px;">
+    <div class="tab-pane active fade in" id="html5">标准通用标记语言下的一个应用HTML标准自1999年12月发布的HTML4.01后，后继的HTML5和其它标准被束之高阁，为了推动Web标准化运动的发展，一些公司联合起来，成立了一个叫做 Web Hypertext
+        Application Technology Working Group （Web超文本应用技术工作组 -WHATWG） 的组织。WHATWG 致力于 Web 表单和应用程序，而W3C（World Wide Web
+        Consortium，万维网联盟） 专注于XHTML2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。
+        HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，于2007年被W3C接纳，并成立了新的 HTML 工作团队。
+        HTML 5 的第一份正式草案已于2008年1月22日公布。HTML5 仍处于完善之中。然而，大部分现代浏览器已经具备了某些 HTML5 支持。
+        2012年12月17日，万维网联盟（W3C）正式宣布凝结了大量网络工作者心血的HTML5规范已经正式定稿。根据W3C的发言稿称：“HTML5是开放的Web网络平台的奠基石。”</div>
+    <div class="tab-pane fade" id="bootstrap">Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。[1]
+        它由Twitter的设计师Mark
+        Otto和Jacob
+        Thornton合作开发，是一个CSS/HTML框架。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking
+        News都使用了该项目。[2] 国内一些移动开发者较为熟悉的框架，如WeX5前端开源框架等，也是基于Bootstrap源码进行性能优化而来。[3]
+        Bootstrap是基于HTML5和CSS3开发的，它在jQuery的基础上进行了更为个性化和人性化的完善，形成一套自己独有的网站风格，并兼容大部分jQuery插件。
+    </div>
+    <div class="tab-pane fade" id="jquery">
+        jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do
+        More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。
+        jQuery的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口；具有高效灵活的css选择器，并且可对CSS选择器进行扩展；拥有便捷的插件扩展机制和丰富的插件。jQuery兼容各种主流浏览器，如IE
+        6.0+、FF
+        1.5+、Safari 2.0+、Opera 9.0+等。[1]
+        这些代码也是jQuery语法的最初雏形。当时John的想法很简单：他发现这种语法相对现有的JavaScript库更为简洁。但他没想到的是，这篇文章一经发布就引起了业界的关注。于是John开始认真思考着这件事情（编写语法更为简洁的JavaScript程序库），直到2006年1月14日，John正式宣布以jQuery的名称发布自己的程序库。随之而来的是jQuery的快速发展。
+        2006年1月John Resig等人创建了jQuery；8月，jQuery的第一个稳定版本，并且已经支持CSS选择符、事件处理和AJAX交互。</div>
+    <div class="tab-pane fade e" id="extjs">
+        YUI 库，全称Yahoo! UI Library。是一组工具和控件，用JavaScript写成, 为的是用DOM 脚本，DHTML和AJAX等技术创建丰富的网页交互式应用程序。
+        YUI 基于BSD协议，对所有的使用方式都是免费的。YUI 项目包括YUI 库和两个创建时工具： YUI Compressor (压缩) 和 YUI Doc （JavaScripts代码的文档引擎）。
+        Yahoo! UI Library (YUI) 是一个开放原始码的 JavaScript函数库，为了能建立一个高互动的网页，它采用了AJAX，DHTML 和 DOM 等程式码技术。它也包含了许多 CSS
+        资源。使用授权为
+        BSD许可证。
+        功能
+        动画：协助达成位置移动、大小改变、透明度和其他的网页效果。
+        浏览器历史纪录管理工具：协助网页程式使用浏览器之上一页与书签工具。
+        连线工具：协助管理跨浏览器的 XMLHttpRequest 功能。他也整合了表单传送、错误处理、callback和档案上传。
+        资料源：提供通用可配置介面给其他组件和资料，如从简单JavaScript阵列到线上伺服器，间透过XHR来互动。
+        元素：为DOM里的HTMLElements提供包装样式，从而简化一般工作如加入监听者、对DOM操作、以及存取属性。
+        容器：支援大量的DHTML视窗规范包括提示框、面板、对话框、简易对话框、模组与覆盖层。
+        资料表：简单且强大的应用程式介面用来显示网页上萤幕阅读器可存取的表资料。值得关注的功能包括可排序的栏、分页、卷轴、行选取、可放大缩小的栏、以及线上编辑。
+        纪录器：提供一种快速简单的方式来写入日志讯息到Mozilla Firefox的Firebug扩充插件画面终端、或者Safari JavaScript终端。
+        表单：提供简易产生滑鼠移过弹出选单的方式。
+        滑块：提供一般性滑块组件让用户可在有限范围内以单轴或者双轴选择值。
+    </div>
+</div>
+
+<script src="jquery-3.1.1.js"></script>
+<script src="bootstrap-3.3.0/dist/js/bootstrap.js"></script>
+<script>
+    //ul加上id-nav
+    $("#nav a").on('click',function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    })
+    $("#nav a").on('show.bs.tab',function () {
+        alert('调用前触发');
+    })
+    $("#nav a").on('shown.bs.tab',function () {
+        alert('调用后触发');
+    })
+</script>
+</body>
+</html>

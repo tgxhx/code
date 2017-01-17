@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>16-警告框插件</title>
+    <link rel="stylesheet" href="bootstrap-3.3.0/dist/css/bootstrap.css">
+    <style>
+        a:focus {
+            outline: none;
+        }
+        .view {
+            width:300px;
+            height:100px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body style="padding:  200px;">
+
+<div id="alert" class="alert alert-warning fade in">
+    <!--data-dismiss关闭-button-->
+    <button class="close">
+        <span>&times;</span>
+    </button>
+    <p>浏览器不支持</p>
+</div>
+
+<script src="jquery-3.1.1.js"></script>
+<script src="bootstrap-3.3.0/dist/js/bootstrap.js"></script>
+<script>
+    $(".close").on("click",function () {
+       $("#alert").alert("close");
+    });
+</script>
+</body>
+</html>

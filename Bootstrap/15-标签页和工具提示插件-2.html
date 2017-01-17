@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>15-工具提示插件</title>
+    <link rel="stylesheet" href="bootstrap-3.3.0/dist/css/bootstrap.css">
+    <style>
+        a:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body style="padding:  200px;">
+
+<!--<a href="#" id="html5"
+   data-toggle="tooltip"
+   title="超文本标识符"
+   data-placement="auto"
+   data-trigger="hover focus"
+   data-delay="100"
+   data-template=""
+>Html5</a>-->
+
+<div id="selection">
+    <a href="#" rel="tooltip" data-toggle="tooltip" title="超文本标识符">Html5</a>
+    <a href="#" data-toggle="tooltip" title="超文本标识符">Html5</a>
+</div>
+
+<script src="jquery-3.1.1.js"></script>
+<script src="bootstrap-3.3.0/dist/js/bootstrap.js"></script>
+<script>
+    /*$("#html5").tooltip({
+        delay: {
+            show: 500,
+            hide: 100,
+        },
+     placement: 'left'
+    });*/
+
+    $("#selection").tooltip({
+        selector: 'a[rel=tooltip]'
+    });
+</script>
+</body>
+</html>

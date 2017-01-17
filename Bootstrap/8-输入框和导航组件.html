@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>图标和按钮组件</title>
+    <link rel="stylesheet" href="bootstrap-3.3.0/dist/css/bootstrap.css">
+    <style>
+        .a {
+            height: 50px;
+            border: 1px solid #ccc;
+            background-color: #EEEEEE;
+        }
+    </style>
+</head>
+<body style="margin: 50px;">
+
+<!--左侧添加文字-->
+<div class="input-group">
+    <span class="input-group-addon">@</span>
+    <input type="text" class="form-control">
+</div>
+<br/>
+<div class="input-group">
+    <input type="text" class="form-control">
+    <span class="input-group-addon">@163.com</span>
+</div>
+<br/>
+<div class="input-group">
+    <span class="input-group-addon">$</span>
+    <input type="text" class="form-control">
+    <span class="input-group-addon">.00</span>
+</div>
+<br/>
+
+<!--input-group-lg改大小-->
+<div class="input-group input-group-lg">
+    <span class="input-group-addon"><input type="checkbox"></span>
+    <input type="text" class="form-control">
+</div>
+<br/>
+<div class="input-group">
+    <span class="input-group-addon"><input type="radio" name=" " id=""></span>
+    <input type="text" class="form-control">
+</div>
+
+<br/>
+<div class="input-group">
+    <input type="text" class="form-control">
+    <div class="input-group-btn">
+        <button class="btn btn-default">提交</button>
+    </div>
+</div>
+<br/>
+
+<div class="input-group">
+    <input type="text" class="form-control">
+    <div class="input-group-btn">
+        <button class="btn btn-default">下拉菜单</button>
+        <button class="btn btn-default" data-toggle="dropdown">
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li></li>
+            <li><a href="">首页</a></li>
+            <li><a href="">资讯</a></li>
+            <li class="divider"><a href="">产品</a></li>
+            <li class="disabled"><a href="">关于</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="jquery-3.1.1.js"></script>
+<script src="bootstrap-3.3.0/dist/js/bootstrap.js"></script>
+</body>
+</html>
